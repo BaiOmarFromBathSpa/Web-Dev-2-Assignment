@@ -1,0 +1,43 @@
+:root {
+    --CursorSize: 20px;
+    --CursorTop: 0px;
+    --CursorLeft: 0px;
+}
+
+body {
+    min-height: 100vw;
+    min-height: 100svw;
+
+    margin: 0;
+    cursor: none;
+}
+
+.Cursor {
+    position: absolute;
+    width: var(--CursorSize);
+    aspect-ratio: 1;
+    /* background: red; */
+    
+    border: 4px solid rgb(92, 92, 92);
+    border-radius: 50%;
+    
+    top: var(--CursorTop);
+    left: var(--CursorLeft);
+    
+    transition: 100ms ease-out;
+}
+
+.Cursor::after {
+    content: '';
+    width: 4px;
+    aspect-ratio: 1;
+    rotate: 45deg;
+    
+    border: 2px solid gray;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 5px 0px;
+
+    transition: 200ms ease-out;
+}
